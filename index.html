@@ -7,7 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/lighter.css" rel="stylesheet">
   </head>
-  <body>
+  <body onload="onLoad()>
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -108,21 +108,20 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
     
-    $(function() {
-         
-        onDeviceReady();
-   
-        }
-        );
+ // Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-    // Cordova is loaded and it is now safe to make calls Cordova methods
+    // device APIs are available
     //
     function onDeviceReady() {
-       
         adbuddiz.setAndroidPublisherKey("24b9a637-7282-4dac-abeb-7bbc00e8ee2d");
         adbuddiz.showAd();
-    } 
-    
+    }
+
+     
       $(".nav-link").click(function(e) {
         e.preventDefault();
         var link = $(this);
