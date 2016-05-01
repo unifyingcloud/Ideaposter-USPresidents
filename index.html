@@ -7,7 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/lighter.css" rel="stylesheet">
   </head>
-  <body onload="onLoad()>
+  <body onload="onLoad()">
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -117,12 +117,18 @@
     // device APIs are available
     //
     function onDeviceReady() {
+      
+         adbuddiz.setTestModeActive();
         adbuddiz.setAndroidPublisherKey("24b9a637-7282-4dac-abeb-7bbc00e8ee2d");
-        adbuddiz.showAd();
+        
     }
 
      
       $(".nav-link").click(function(e) {
+        
+         
+        adbuddiz.showAd();
+        
         e.preventDefault();
         var link = $(this);
         var href = link.attr("href");
