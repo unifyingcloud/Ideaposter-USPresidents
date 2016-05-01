@@ -107,13 +107,18 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
+    
+    $(function() {
+         
+        onDeviceReady();
+   
+        }
+        );
 
     // Cordova is loaded and it is now safe to make calls Cordova methods
     //
     function onDeviceReady() {
+       
         adbuddiz.setAndroidPublisherKey("24b9a637-7282-4dac-abeb-7bbc00e8ee2d");
         adbuddiz.showAd();
     } 
