@@ -12,7 +12,7 @@
     <author href="https://www.unifyingcloud.com" email="jonatane.cisneros@gmail.com">
         Unifying Cloud
     </author>
-<icon src="img/image.jpg" />
+<icon src="icon.png" />
     <!--
       If you do not want any permissions to be added to your app, add the
       following tag to your config.xml; you will still have the INTERNET
